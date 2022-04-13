@@ -5,8 +5,8 @@ import appleBadge from "../../../public/svg/apple-store-badge.svg";
 import playStoreBadge from "../../../public/svg/play-store-badge.svg";
 
 export const StoresBadges = () => (
-  <div className="flex justify-between ">
-    <figure>
+  <div className="flex ">
+    <figure className="mr-4">
       <Image alt="Apple store" src={appleBadge} />
     </figure>
     <figure>

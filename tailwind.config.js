@@ -5,6 +5,15 @@ module.exports = {
   ],
   theme: {
     extend: {
+      spacing: {
+        auto0: "0 auto",
+      },
+      screens: {
+        base: "320px",
+      },
+      maxWidth: {
+        maxScreen: "1536px",
+      },
       colors: {
         primary: "#57BE85",
         deepGreen: "#389863",

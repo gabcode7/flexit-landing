@@ -16,7 +16,8 @@ export const Layout = (props: PropsWithChildren<IProps>) => {
         <meta name="description" content={description} />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="px-4">{children}</main>
+      {/* <div className="2xl:flex 2xl:justify-center"></div> */}
+      <main className="m-auto0 px-4 max-w-maxScreen">{children}</main>
       <Footer />
     </div>
   );
