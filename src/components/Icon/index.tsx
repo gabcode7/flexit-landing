@@ -8,9 +8,12 @@ import ChronometerIcon from "../../../public/svg/chronometer-icon.svg";
 import GraphicIcon from "../../../public/svg/graphic-icon.svg";
 import HeartIcon from "../../../public/svg/heart-icon.svg";
 import MoneyIcon from "../../../public/svg/money-icon.svg";
+import ArrowDown from "../../../public/svg/arrow-down.svg";
 
 interface IProps {
   icon: TIcons;
+  className?: string;
+  onClick?: (value?: any) => void;
 }
 
 const getIcon = (icon: TIcons) => {
@@ -32,6 +35,8 @@ const getIcon = (icon: TIcons) => {
 
     case "Graphic":
       return GraphicIcon;
+    case "ArrowDown":
+      return ArrowDown;
     default:
       "";
       break;
@@ -39,9 +44,9 @@ const getIcon = (icon: TIcons) => {
 };
 
 export const Icon = (props: IProps) => {
-  const { icon } = props;
+  const { icon, className, onClick } = props;
   return (
-    <figure>
+    <figure onClick={onClick} className={className}>
       <Image alt="Icono" src={getIcon(icon)} />
     </figure>
   );

@@ -4,4 +4,5 @@ export type TIcons =
   | "Chronometer"
   | "Money"
   | "Graphic"
-  | "Heart";
+  | "Heart"
+  | "ArrowDown";

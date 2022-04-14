@@ -17,7 +17,7 @@ export const Footer = () => {
           formas de trabajo.
         </p>
 
-        <div className="mt-8">
+        <div className="mt-8 flex justify-center">
           <StoresBadges />
         </div>
 
