@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { PropsWithChildren } from "react";
 import { Footer } from "../Footer";
+import { Header } from "../Header";
 
 interface IProps {
   title: string;
@@ -11,6 +12,7 @@ export const Layout = (props: PropsWithChildren<IProps>) => {
   const { title, description, children } = props;
   return (
     <div>
+      <Header />
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />

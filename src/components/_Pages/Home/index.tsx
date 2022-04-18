@@ -29,21 +29,7 @@ export const HomePage: NextPage = () => {
               <StoresBadges />
             </div>
           </div>
-          {/* <div
-            className="flex justify-end relative b-0"
-            style={{ height: "100%", width: "max-content" }}
-          >
-            <NextImage
-              alt="Flexit app"
-              src={MobileFlexitImg}
-              width={350}
-              height={300}
-            />
-          </div> */}
-          <div
-            style={{ height: 320 }}
-            className="w-full w925:w-1/4 relative mt-8 flex items-center justify-center"
-          >
+          <div className="w-full h-56 w925:w-1/4 w925: relative mt-8 flex items-center justify-center">
             <Image alt="Ilustración de chica" src={MobileFlexitImg} />
           </div>
         </div>
@@ -59,7 +45,7 @@ export const HomePage: NextPage = () => {
       </section>
 
       <div className="w925:px-8">
-        <section className="my-16 flex flex-wrap justify-between">
+        <section id="personas" className="my-16 flex flex-wrap justify-between">
           <div
             style={{ height: 320 }}
             className="w-full w925:w-1/4 relative mt-8 flex items-center justify-center"
@@ -142,7 +128,10 @@ export const HomePage: NextPage = () => {
           </div>
         </section>
 
-        <section className="flex my-16 justify-start flex-wrap-reverse">
+        <section
+          id="empresas"
+          className="flex my-16 justify-start flex-wrap-reverse"
+        >
           <div className="w925:w-3/5">
             <h2 className="text-4xl font-extrabold text-black">
               Quiero ser una <br /> empresa{" "}
@@ -230,21 +219,22 @@ export const HomePage: NextPage = () => {
           </div>
         </section>
 
-        <figure
-          style={{ height: 320 }}
-          className="my-16 w-full flex items-center justify-center"
-        >
+        <figure className="my-16 w-full flex items-center justify-center">
           <NextImage
+            width={227.02}
+            height={435.27}
             alt="Aplicación de Flexit"
             src={FlexitPreview1Illustration}
           />
           <NextImage
+            width={227.02}
+            height={435.27}
             alt="Aplicación de Flexit"
             src={FlexitPreview2Illustration}
           />
         </figure>
 
-        <section>
+        <section id="preguntas-frecuentes">
           <h2 className="text-4xl text-center font-extrabold text-black">
             Preguntas frecuentes
           </h2>
