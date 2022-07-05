@@ -15,13 +15,13 @@ export const HomePage: NextPage = () => {
   return (
     <div>
       <section>
-        <div className="bg-primary w925:px-8 pt-8 flex flex-col items-center w925:flex w925:flex-row rounded-primary">
+        <div className="bg-primary w925:px-44  pt-8 flex flex-col items-center w925:flex w925:flex-row rounded-primary">
           <div className="w-full w925:mr-16 w925:w-2/5">
             <h1 className="text-white text-5xl w925:text-6xl text-center w925:text-left font-bold">
               ¡Súmate hoy <br /> a Flexit!
             </h1>
-            <div className="hidden w925:flex flex-col justify-center pr-4 bg-transparent">
-              <p className="my-8 text-black font-normal leading-5">
+            <div className=" w925:flex flex-col justify-center pr-4 bg-transparent">
+              <p className="my-8 text-black text-center w925:text-left font-normal leading-5">
                 Encuentra ofertas de trabajo que se ajustan a tus tiempos, de
                 forma rápida y flexible.
               </p>
@@ -29,23 +29,23 @@ export const HomePage: NextPage = () => {
               <StoresBadges />
             </div>
           </div>
-          <div className="w-full h-56 w925:w-1/4 w925: relative mt-8 flex items-center justify-center">
+          <div className="w-full h-56 w925:w-1/4 w925:  mt-8 flex items-center justify-center">
+            {/* <NextImage
+              alt="Ilustración de chica"
+              src={MobileFlexitImg}
+              width={300}
+              height={400}
+            /> */}
             <Image alt="Ilustración de chica" src={MobileFlexitImg} />
           </div>
         </div>
-
-        <div className="flex w925:hidden flex-col justify-center items-center bg-transparent">
-          <p className="my-8 text-black font-normal text-center leading-5">
-            Encuentra ofertas de trabajo que se ajustan a tus tiempos, de forma
-            rápida y flexible.
-          </p>
-
-          <StoresBadges />
-        </div>
       </section>
 
-      <div className="w925:px-8">
-        <section id="personas" className="my-16 flex flex-wrap justify-between">
+      <div className=" w925:px-8">
+        <section
+          id="personas"
+          className="w-full my-16 flex flex-wrap justify-between"
+        >
           <div
             style={{ height: 320 }}
             className="w-full w925:w-1/4 relative mt-8 flex items-center justify-center"
@@ -62,7 +62,7 @@ export const HomePage: NextPage = () => {
               Sumándote a Flextit podrás:
             </p>
 
-            <div className="flex flex-wrap justify-between w925:justify-start w-full">
+            <div className="border border-red-500 w-full grid grid-rows-2 grid-flow-col place-items-center md:flex md:flex-wrap md:justify-between w925:justify-start">
               <article
                 style={{ width: 145 }}
                 className="flex mt-4 mr-3 flex-col items-center justify-center"

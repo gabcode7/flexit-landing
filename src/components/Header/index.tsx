@@ -1,4 +1,5 @@
 import NextImage from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 import logo from "../../../public/svg/flexit.svg";
 
@@ -7,9 +8,13 @@ export const Header = () => {
   return (
     <header className="px-4 py-16">
       <div className="flex justify-between items-center">
-        <div>
-          <NextImage src={logo} />
-        </div>
+        <Link href="/">
+          <a>
+            <div>
+              <NextImage src={logo} />
+            </div>
+          </a>
+        </Link>
 
         <nav className="hidden w925:block">
           <ul className="flex">
