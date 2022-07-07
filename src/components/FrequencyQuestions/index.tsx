@@ -84,9 +84,7 @@ Finalmente firmarás el contrato de forma electrónica y recibirás toda la info
 
       <Question
         question="¿Qué pasa si no tengo AFP?"
-        awnser="Si no tienes AFP, se te asignará aquella que haya ganado la última licitación de la Superintendencia de AFP. 
-
-Puedes descargar tu certificado de no afiliación en el siguiente link https://www.spensiones.cl/apps/certificados/formCertificadoAfiliacion.php "
+        awnser="Si no tienes AFP, se te asignará aquella que haya ganado la última licitación de la Superintendencia de AFP.Puedes descargar tu certificado de no afiliación en el siguiente link www.spensiones.cl"
       />
 
       <Question
