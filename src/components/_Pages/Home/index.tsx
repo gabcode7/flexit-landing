@@ -218,12 +218,6 @@ export const HomePage: NextPage = () => {
                 <p className="text-center">Todo en una sola plataforma</p>
               </article>
             </div>
-
-            <div className="mt-8">
-              <button className="w925:w-56 rounded-primary bg-black text-white p-4 w-full">
-                Agendar reunión
-              </button>
-            </div>
           </div>
           <div
             style={{ height: 320 }}
@@ -236,7 +230,7 @@ export const HomePage: NextPage = () => {
           </div>
         </section>
 
-        <section id="contact-form" className="mt-16">
+        <section id="contact-form" className="mt-20">
           <h4 className="m-auto md:w-2/5 md:text-center md:text-lg mb-8">
             Si quieres tener más información y saber{" "}
             <b>cómo Flexit puede ayudar a tu empresa, </b>ponte en contacto con
@@ -291,7 +285,7 @@ export const HomePage: NextPage = () => {
           </div>
         </section>
 
-        <section className="mt-20">
+        <section className="mt-24">
           <h1 className="font-bold text-3xl md:text-4xl md:text-center mt-14">
             Empresas que son parte de <b className="text-primary">Flexit</b>
           </h1>

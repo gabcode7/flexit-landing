@@ -68,7 +68,7 @@ Finalmente firmarás el contrato de forma electrónica y recibirás toda la info
 
       <Question
         question="¿Qué pasa si tengo gratuidad?"
-        awnser="Según la ley 21165 sobre trabajos parciales para estudiantes, los ingresos que generes en Flexit no deberían afectar las postulaciones a fondos solidarios, créditos fiscales universitarios ni becas que ayuden a financiar tus estudios. "
+        awnser="Según la Ley 21.164, sobre trabajos parciales para estudiantes, los ingresos que generes en Flexit no afectan a las postulaciones a fondos solidarios, créditos fiscales y/o becas que ayuden a financiar tus estudios.   "
       />
 
       <Question
@@ -84,12 +84,14 @@ Finalmente firmarás el contrato de forma electrónica y recibirás toda la info
 
       <Question
         question="¿Qué pasa si no tengo AFP?"
-        awnser="Si no tienes AFP, se te asignará aquella que haya ganado la última licitación de la Superintendencia de AFP, que actualmente corresponde a la AFP Uno. Además, debes descargar el certificado de no afiliación en el siguiente link."
+        awnser="Si no tienes AFP, se te asignará aquella que haya ganado la última licitación de la Superintendencia de AFP. 
+
+Puedes descargar tu certificado de no afiliación en el siguiente link https://www.spensiones.cl/apps/certificados/formCertificadoAfiliacion.php "
       />
 
       <Question
         question="¿Qué pasa si soy carga en Isapre o Fonasa?"
-        awnser="En este caso, debes subir un certificado que constate tu nombre y calidad de carga. Para Fonasa, ingresa a Fonasa.cl->Mi Fonasa->Mi perfil y descargar tu certificado. "
+        awnser="En este caso, debes subir un certificado que constate tu nombre y calidad de carga. Para Fonasa, ingresa a Fonasa.cl / Fonasa / perfil y descargar tu certificado. "
       />
     </div>
   );
