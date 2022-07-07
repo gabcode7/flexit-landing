@@ -4,7 +4,29 @@ module.exports = {
     "./src/components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      spacing: {
+        auto0: "0 auto",
+      },
+      screens: {
+        base: "320px",
+        w925: "925px",
+        w1139: "1139px",
+      },
+      maxWidth: {
+        maxScreen: "1536px",
+      },
+      colors: {
+        primary: "#57BE85",
+        deepGreen: "#389863",
+        lightGreen: "#CFEEDD80",
+        deepGray: "#323232",
+        ownWhite: "#EFEFEF",
+      },
+      borderRadius: {
+        primary: "16px",
+      },
+    },
   },
   plugins: [],
 };
