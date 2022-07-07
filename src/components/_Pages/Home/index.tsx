@@ -19,6 +19,8 @@ import ClarksLogo from "../../../../public/illustration/clarks.png";
 import CalzedoniaLogo from "../../../../public/illustration/calzedonia.png";
 import CartesLogo from "../../../../public/illustration/carters.png";
 import MockupPantallas from "../../../../public/illustration/mockup-pantallas.png";
+import Flexit from "../../../../public/svg/flexit.svg";
+import FlexitCellphone from "../../../../public/illustration/flexit-cellphone.png";
 import { StoresBadges } from "../../StoresBadges";
 import { Icon } from "../../Icon";
 import { FrequencyQuestions } from "../../FrequencyQuestions";
@@ -28,12 +30,16 @@ export const HomePage: NextPage = () => {
     <div>
       <section>
         <div className="bg-primary w925:px-44  pt-8 flex flex-col items-end align-end w925:flex w925:flex-row rounded-primary">
-          <div className="w-full w925:mr-16 w925:w-2/5 pl-4 md:pb-2">
+          <div className="w-full w925:mr-16  pl-4 md:pb-2">
             <h1 className="text-white text-5xl w925:text-6xl md:text-center w925:text-left font-bold">
-              ¡Súmate hoy <br /> a Flexit!
+              ¡Súmate hoy <br /> a{" "}
+              <span>
+                <NextImage alt="flexit" src={Flexit} />
+              </span>
+              !
             </h1>
             <div className=" w925:flex flex-col justify-center pr-4 bg-transparent">
-              <p className="my-8 text-black md:text-center w925:text-left font-normal leading-5">
+              <p className="my-8 text-black md:text-center w925:text-left font-normal leading-5 w925:text-lg">
                 Acercamos a las personas que buscan{" "}
                 <b>trabajo flexible y de corto plazo</b> con empresas que
                 necesitan <b>apoyos temporales de manera rápida,</b> y todo en
@@ -43,14 +49,13 @@ export const HomePage: NextPage = () => {
               <StoresBadges />
             </div>
           </div>
-          <div className="w-full h-56 w925:w-1/4 w925:  mt-8 flex items-center justify-center">
-            {/* <NextImage
-              alt="Ilustración de chica"
-              src={MobileFlexitImg}
-              width={300}
-              height={400}
-            /> */}
-            <Image alt="Ilustración de chica" src={MobileFlexitImg} />
+          <div className="w-full  flex items-center justify-center">
+            <img
+              alt="flexit-cellphone"
+              src={FlexitCellphone.src}
+              height="400px"
+              width="400px"
+            />
           </div>
         </div>
       </section>
