@@ -9,6 +9,7 @@ import GraphicIcon from "../../../public/svg/graphic-icon.svg";
 import HeartIcon from "../../../public/svg/heart-icon.svg";
 import MoneyIcon from "../../../public/svg/money-icon.svg";
 import ArrowDown from "../../../public/svg/arrow-down.svg";
+import CalendarIcon from "../../../public/svg/calendar.svg";
 
 interface IProps {
   icon: TIcons;
@@ -20,6 +21,9 @@ const getIcon = (icon: TIcons) => {
   switch (icon) {
     case "Clock":
       return ClockIcon;
+
+    case "Calendar":
+      return CalendarIcon;
 
     case "Location":
       return LocationIcon;

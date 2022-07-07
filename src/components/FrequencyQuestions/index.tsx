@@ -11,16 +11,16 @@ const Question = ({ question, awnser }: IQuestion) => {
   return (
     <div
       onClick={() => setShowAawnser(!showAawnser)}
-      className="border border-black rounded-primary p-4 w925:border-0 w925:"
+      className="border border-black rounded-primary p-4"
     >
       <div className="flex justify-between">
-        <h3 className="font-bold text-xl w-5/6">{question}</h3>
+        <h3 className="font-bold text-lg md:text-xl w-5/6">{question}</h3>
         <div
-          className="w-1/6 flex justify-end"
+          className="w-1/6 flex justify-end items-start"
           style={{ width: 50, height: 50 }}
         >
           <Icon
-            className={`cursor-pointer w925:hidden ${
+            className={`cursor-pointer  ${
               showAawnser ? "rotate-180" : "rotate-0"
             }`}
             icon="ArrowDown"
@@ -28,7 +28,7 @@ const Question = ({ question, awnser }: IQuestion) => {
         </div>
       </div>
 
-      <div className={`mt-4 w925:block ${!showAawnser ? "hidden " : "block"}`}>
+      <div className={`mt-4 ${!showAawnser ? "hidden " : "block"}`}>
         {typeof awnser === "string" ? (
           <p className="mt-4">{awnser}</p>
         ) : (
@@ -47,7 +47,15 @@ const Question = ({ question, awnser }: IQuestion) => {
 
 export const FrequencyQuestions = () => {
   return (
-    <div className="grid justify-center grid-cols-1 w925:grid-cols-2 gap-4">
+    <div className="grid justify-center grid-cols-1  gap-4">
+      <Question
+        question="¿Cómo funciona Flexit?"
+        awnser={`Para registrarte debes completar tus datos básicos, subir tus documentos y pasar por una video entrevista a cargo de nuestro equipo de selección. 
+Una vez que te registres, puedes tomar todas las ofertas que quieras, siempre cuando no tengan tope de horario. 
+Nuestra App seleccionará a los mejores candidatos, según el desempeño de la entrevista
+Finalmente firmarás el contrato de forma electrónica y recibirás toda la información necesaria para partir tu jornada Flexit.  `}
+      />
+
       <Question
         question="¿Qué necesito para ser parte de Flexit?"
         awnser={[
@@ -59,7 +67,12 @@ export const FrequencyQuestions = () => {
       />
 
       <Question
-        question="¿Qué documentos tengo que subir?"
+        question="¿Qué pasa si tengo gratuidad?"
+        awnser="Según la ley 21165 sobre trabajos parciales para estudiantes, los ingresos que generes en Flexit no deberían afectar las postulaciones a fondos solidarios, créditos fiscales universitarios ni becas que ayuden a financiar tus estudios. "
+      />
+
+      <Question
+        question="¿Qué documentos necesito subir a la plataforma?"
         awnser={[
           "Tu cédula de identidad.",
           "Certificado de estudios (alumno regular).",
@@ -70,23 +83,13 @@ export const FrequencyQuestions = () => {
       />
 
       <Question
-        question="¿Qué pasa si tengo gratuidad?"
-        awnser="Según la ley 21165 sobre trabajos parciales para estudiantes, los ingresos que generes en Flexit no deberían afectar las postulaciones a fondos solidarios, créditos fiscales universitarios ni becas que ayuden a financiar tus estudios. "
-      />
-
-      <Question
-        question="¿Qué pasa si soy carga en Isapre o Fonasa?"
-        awnser="En este caso, debes subir un certificado que constate tu nombre y calidad de carga. Para Fonasa, ingresa a Fonasa.cl->Mi Fonasa->Mi perfil y descargar tu certificado. "
-      />
-
-      <Question
         question="¿Qué pasa si no tengo AFP?"
         awnser="Si no tienes AFP, se te asignará aquella que haya ganado la última licitación de la Superintendencia de AFP, que actualmente corresponde a la AFP Uno. Además, debes descargar el certificado de no afiliación en el siguiente link."
       />
 
       <Question
-        question="¿Por qué es importante marcar tus jornadas en el reloj control?"
-        awnser="Es importante que marques tu entrada y salida al inicio y final de tu jornada para que las horas trabajadas efectivamente se asignen a tu sueldo. No debes marcar cuando sales almorzar. Si tienes dudas de sueldos haz clic aquí. "
+        question="¿Qué pasa si soy carga en Isapre o Fonasa?"
+        awnser="En este caso, debes subir un certificado que constate tu nombre y calidad de carga. Para Fonasa, ingresa a Fonasa.cl->Mi Fonasa->Mi perfil y descargar tu certificado. "
       />
     </div>
   );

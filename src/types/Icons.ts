@@ -5,4 +5,5 @@ export type TIcons =
   | "Money"
   | "Graphic"
   | "Heart"
+  | "Calendar"
   | "ArrowDown";
