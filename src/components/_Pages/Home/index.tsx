@@ -67,7 +67,7 @@ export const HomePage: NextPage = () => {
         >
           <div
             style={{ height: 320 }}
-            className="w-full w925:w-1/4 relative mt-8 flex items-center justify-center"
+            className="w-full w925:w-2/5 relative mt-8 flex items-center justify-center"
           >
             <Image alt="Ilustración de chica" src={GirlIllustration} />
           </div>
