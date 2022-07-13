@@ -143,7 +143,7 @@ export const HomePage: NextPage = () => {
               </article>
             </div>
 
-            <div className="mt-8 flex justify-center w925:justify-start">
+            <div className="mt-8 flex justify-center w925:justify-start w925:hidden">
               <StoresBadges />
             </div>
           </div>
