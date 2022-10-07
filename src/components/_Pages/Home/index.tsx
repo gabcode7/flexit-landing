@@ -1,11 +1,9 @@
 import type { NextPage } from "next";
 import { Image } from "../../Image";
-import NextImage, { StaticImageData } from "next/image";
-import MobileFlexitImg from "../../../../public/svg/flexit-mobile.svg";
+import NextImage from "next/image";
+
 import GirlIllustration from "../../../../public/illustration/girl.svg";
 import PeopleSelectionIllustration from "../../../../public/illustration/people-selection.svg";
-import FlexitPreview1Illustration from "../../../../public/illustration/flexit-preview-1.png";
-import FlexitPreview2Illustration from "../../../../public/illustration/flexit-preview-2.png";
 import FormIlustration1 from "../../../../public/illustration/form-ilustration1.svg";
 import FormIlustration2 from "../../../../public/illustration/form-ilustration2.svg";
 import FallabelaLogo from "../../../../public/illustration/falabella.png";
@@ -24,8 +22,34 @@ import FlexitCellphone from "../../../../public/illustration/flexit-cellphone.pn
 import { StoresBadges } from "../../StoresBadges";
 import { Icon } from "../../Icon";
 import { FrequencyQuestions } from "../../FrequencyQuestions";
+import { useState } from "react";
+import { EMAIL } from "../../../config";
+
+interface IForm {
+  name: string;
+  company: string;
+  phone: string;
+  email: string;
+  ableToCall: boolean;
+}
 
 export const HomePage: NextPage = () => {
+  const [form, setForm] = useState<IForm>({
+    name: "",
+    company: "",
+    phone: "",
+    email: "",
+    ableToCall: false,
+  });
+
+  const mailMessage = `Hola, me gustaria que mi empresa acceda a Flexit:%0D%0A%0D%0ANombre: ${
+    form.name
+  }%0D%0A%0D%0AEmpresa: ${form.company}%0D%0A%0D%0ACorreo electrónico: ${
+    form.email
+  }%0D%0A%0D%0ATelefono: ${form.phone}%0D%0A%0D%0A ${
+    form.ableToCall ? "Quiero" : "No quiero"
+  } que me llamen`;
+
   return (
     <div>
       <section>
@@ -246,8 +270,12 @@ export const HomePage: NextPage = () => {
               <NextImage src={FormIlustration1} />
             </div>
             <div className="w-full md:mr-16 md:ml-4 md:w-1/4">
-              <form>
+              <form onSubmit={(ev) => ev.preventDefault()}>
                 <input
+                  value={form.name}
+                  onChange={(ev) =>
+                    setForm((prev) => ({ ...prev, name: ev.target.value }))
+                  }
                   className="shadow border border-gray-400 rounded-lg py-2.5 px-3 text-gray-700 focus:outline-primary mb-3.5 w-full"
                   placeholder="Nombre y apellido"
                   autoComplete="off"
@@ -255,6 +283,9 @@ export const HomePage: NextPage = () => {
                 />{" "}
                 <br />
                 <input
+                  onChange={(ev) =>
+                    setForm((prev) => ({ ...prev, company: ev.target.value }))
+                  }
                   className="shadow border border-gray-400 rounded-lg py-2.5 px-3 text-gray-700 focus:outline-primary mb-3.5 w-full"
                   placeholder="Empresa"
                   autoComplete="off"
@@ -262,6 +293,9 @@ export const HomePage: NextPage = () => {
                 />{" "}
                 <br />
                 <input
+                  onChange={(ev) =>
+                    setForm((prev) => ({ ...prev, email: ev.target.value }))
+                  }
                   className="shadow border border-gray-400 rounded-lg py-2.5 px-3 text-gray-700 focus:outline-primary mb-3.5 w-full"
                   placeholder="Correo electrónico"
                   autoComplete="off"
@@ -269,6 +303,9 @@ export const HomePage: NextPage = () => {
                 />{" "}
                 <br />
                 <input
+                  onChange={(ev) =>
+                    setForm((prev) => ({ ...prev, phone: ev.target.value }))
+                  }
                   className="shadow border border-gray-400 rounded-lg py-2.5 px-3 text-gray-700 focus:outline-primary mb-1 w-full"
                   placeholder="Teléfono"
                   autoComplete="off"
@@ -279,9 +316,31 @@ export const HomePage: NextPage = () => {
                   Ejemplo: +569777777
                 </span>
                 <br />
-                <button className="py-3 bg-gray-100 rounded-2xl text-gray-500 w-full mt-4">
-                  Quiero que me llamen
-                </button>
+                <div className="my-4">
+                  <label className="py-3 cursor-pointer rounded-2xl text-gray-500 w-full ">
+                    <input
+                      checked={form.ableToCall}
+                      onChange={(ev) =>
+                        setForm((prev) => ({
+                          ...prev,
+                          ableToCall: !prev.ableToCall,
+                        }))
+                      }
+                      type="checkbox"
+                      id="cbox1"
+                    />
+                    <span className="ml-3">Quiero que me llamen</span>
+                  </label>
+                </div>
+                {form.name && form.email && form.company && form.phone && (
+                  <a
+                    href={`mailto:${EMAIL}?cc=${form.email}&subject=Quiero ser una empresa Flexit&body=${mailMessage}`}
+                  >
+                    <p className="bg-primary p-4 border border-primary rounded-lg text-center text-white font-bold">
+                      Enviar correo electrónico
+                    </p>
+                  </a>
+                )}
               </form>
             </div>
             <div className=" hidden md:block">
