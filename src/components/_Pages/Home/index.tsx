@@ -269,6 +269,7 @@ export const HomePage: NextPage = () => {
             <div className=" hidden md:block">
               <NextImage src={FormIlustration1} />
             </div>
+
             <div className="w-full md:mr-16 md:ml-4 md:w-1/4">
               <form onSubmit={(ev) => ev.preventDefault()}>
                 <input
