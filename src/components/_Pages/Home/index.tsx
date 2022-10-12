@@ -67,7 +67,7 @@ export const HomePage: NextPage = () => {
                 Acercamos a las personas que buscan{" "}
                 <b>trabajo flexible y de corto plazo</b> con empresas que
                 necesitan <b>apoyos temporales de manera rápida,</b> y todo en
-                un par de clics.
+                un par de clicks.
               </p>
 
               <StoresBadges />
